@@ -1,0 +1,71 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Preety Eats — Delicious delivery</title>
+  <meta name="description" content="A modern food delivery UI inspired by the best—browse restaurants, add to cart, and checkout with style." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="app">
+    <!-- Header -->
+    <header class="header glass">
+      <div class="header-left">
+        <button class="icon-btn" id="menuBtn" aria-label="Open menu"><i class="ri-menu-2-line"></i></button>
+        <a href="#/" class="brand">
+          <span class="logo gradient-text">Preety</span>
+          <span class="brand-sub">Eats</span>
+        </a>
+      </div>
+      <div class="header-center">
+        <div class="search-bar" id="globalSearch"></div>
+      </div>
+      <div class="header-right">
+        <button class="icon-btn" id="themeToggle" aria-label="Toggle theme"><i class="ri-sun-line"></i></button>
+        <button class="icon-btn" id="cartOpen" aria-label="Open cart"><i class="ri-shopping-cart-2-line"></i><span class="badge" id="cartCount">0</span></button>
+      </div>
+    </header>
+
+    <!-- Main content rendered by router -->
+    <main id="view" class="container"></main>
+
+    <!-- Footer -->
+    <footer class="footer glass">
+      <div class="footer-grid">
+        <div>
+          <h4>Preety Eats</h4>
+          <p>Order from top-rated restaurants near you. Smooth, simple, and preetty ✨</p>
+        </div>
+        <div>
+          <h4>Popular Cuisines</h4>
+          <ul class="list-inline" id="popularCuisines"></ul>
+        </div>
+        <div>
+          <h4>Get the App</h4>
+          <div class="store-buttons">
+            <a class="store-btn" href="#"><i class="ri-apple-fill"></i> App Store</a>
+            <a class="store-btn" href="#"><i class="ri-google-play-fill"></i> Play Store</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">© <span id="year"></span> Preety Eats • Built for demo</div>
+    </footer>
+
+    <!-- Cart Drawer -->
+    <aside id="cartDrawer" class="cart-drawer" aria-hidden="true"></aside>
+
+    <!-- Toasts -->
+    <div id="toastHost" class="toast-host"></div>
+  </div>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
+``
